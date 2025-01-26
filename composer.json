@@ -1,0 +1,49 @@
+{
+  "name": "aim/auth-ldap-middleware",
+  "description": "Authentication with LDAP from PSR-15 Middleware applications",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "libary",
+  "keywords": [
+    "aim",
+    "advancedideasmechanics",
+    "php",
+    "ldap",
+    "psr-15",
+    "middleware"
+  ],
+  "authors": [
+    {
+      "name": "Matthew Pallotta",
+      "email": "matt@advanced.im",
+      "homepage": "https://advanced.im"
+    }
+  ],
+  "homepage": "https://advanced.im/",
+  "support": {
+    "issues": "https://github.com/advancedideasmechanics/auth-ldap-middleware/issues",
+    "email": "support@advanced.im",
+    "source": "https://github.com/advancedideasmechanics/auth-ldap-middleware"
+  },
+  "require": {
+    "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
+    "ext-ldap": "*",
+    "laminas/laminas-ldap": "^2.18.1",
+    "laminas/laminas-authentication": "^2.18.0",
+    "laminas/laminas-diactoros": "^3.5.0",
+    "psr/http-server-middleware": "^1.0.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aim\\Authladp\\": "src/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
+}
